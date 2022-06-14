@@ -106,15 +106,15 @@ type ActionEnvironmentSecretProps struct {
 	// The GitHub repository name.
 	// Experimental.
 	RepositoryName *string `field:"required" json:"repositoryName" yaml:"repositoryName"`
-	// The GitHub repository owner.
-	// Experimental.
-	RepositoryOwner *string `field:"required" json:"repositoryOwner" yaml:"repositoryOwner"`
 	// The GitHub secret name to be stored.
 	// Experimental.
 	RepositorySecretName *string `field:"required" json:"repositorySecretName" yaml:"repositorySecretName"`
 	// This AWS secret value will be stored in GitHub as a secret (under the name of repositorySecretName).
 	// Experimental.
 	SourceSecret awssecretsmanager.ISecret `field:"required" json:"sourceSecret" yaml:"sourceSecret"`
+	// The GitHub repository owner.
+	// Experimental.
+	RepositoryOwner *string `field:"optional" json:"repositoryOwner" yaml:"repositoryOwner"`
 }
 
 // Experimental.
@@ -210,14 +210,14 @@ type ActionSecretProps struct {
 	// The GitHub repository name.
 	// Experimental.
 	RepositoryName *string `field:"required" json:"repositoryName" yaml:"repositoryName"`
-	// The GitHub repository owner.
-	// Experimental.
-	RepositoryOwner *string `field:"required" json:"repositoryOwner" yaml:"repositoryOwner"`
 	// The GitHub secret name to be stored.
 	// Experimental.
 	RepositorySecretName *string `field:"required" json:"repositorySecretName" yaml:"repositorySecretName"`
 	// This AWS secret value will be stored in GitHub as a secret (under the name of repositorySecretName).
 	// Experimental.
 	SourceSecret awssecretsmanager.ISecret `field:"required" json:"sourceSecret" yaml:"sourceSecret"`
+	// The GitHub repository owner.
+	// Experimental.
+	RepositoryOwner *string `field:"optional" json:"repositoryOwner" yaml:"repositoryOwner"`
 }
 
