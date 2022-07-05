@@ -41,4 +41,21 @@ func init() {
 		"cdk-github.ActionSecretProps",
 		reflect.TypeOf((*ActionSecretProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterClass(
+		"cdk-github.GitHubResource",
+		reflect.TypeOf((*GitHubResource)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "node", GoGetter: "Node"},
+			_jsii_.MemberMethod{JsiiMethod: "toString", GoMethod: "ToString"},
+		},
+		func() interface{} {
+			j := jsiiProxy_GitHubResource{}
+			_jsii_.InitJsiiProxy(&j.Type__constructsConstruct)
+			return &j
+		},
+	)
+	_jsii_.RegisterStruct(
+		"cdk-github.GitHubResourceProps",
+		reflect.TypeOf((*GitHubResourceProps)(nil)).Elem(),
+	)
 }
