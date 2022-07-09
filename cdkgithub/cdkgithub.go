@@ -116,6 +116,11 @@ type ActionEnvironmentSecretProps struct {
 	// The GitHub repository owner.
 	// Experimental.
 	RepositoryOwner *string `field:"optional" json:"repositoryOwner" yaml:"repositoryOwner"`
+	// The key of a JSON field to retrieve in sourceSecret.
+	//
+	// This can only be used if the secret stores a JSON object.
+	// Experimental.
+	SourceSecretJsonField *string `field:"optional" json:"sourceSecretJsonField" yaml:"sourceSecretJsonField"`
 }
 
 // Experimental.
@@ -220,6 +225,11 @@ type ActionSecretProps struct {
 	// The GitHub repository owner.
 	// Experimental.
 	RepositoryOwner *string `field:"optional" json:"repositoryOwner" yaml:"repositoryOwner"`
+	// The key of a JSON field to retrieve in sourceSecret.
+	//
+	// This can only be used if the secret stores a JSON object.
+	// Experimental.
+	SourceSecretJsonField *string `field:"optional" json:"sourceSecretJsonField" yaml:"sourceSecretJsonField"`
 }
 
 // Experimental.
