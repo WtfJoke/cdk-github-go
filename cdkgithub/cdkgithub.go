@@ -104,18 +104,15 @@ type ActionEnvironmentSecretProps struct {
 	// The AWS secret in which the OAuth GitHub (personal) access token is stored.
 	// Experimental.
 	GithubTokenSecret awssecretsmanager.ISecret `field:"required" json:"githubTokenSecret" yaml:"githubTokenSecret"`
-	// The GitHub repository name.
+	// The GitHub repository information (owner and name).
 	// Experimental.
-	RepositoryName *string `field:"required" json:"repositoryName" yaml:"repositoryName"`
+	Repository IGitHubRepository `field:"required" json:"repository" yaml:"repository"`
 	// The GitHub secret name to be stored.
 	// Experimental.
 	RepositorySecretName *string `field:"required" json:"repositorySecretName" yaml:"repositorySecretName"`
 	// This AWS secret value will be stored in GitHub as a secret (under the name of repositorySecretName).
 	// Experimental.
 	SourceSecret awssecretsmanager.ISecret `field:"required" json:"sourceSecret" yaml:"sourceSecret"`
-	// The GitHub repository owner.
-	// Experimental.
-	RepositoryOwner *string `field:"optional" json:"repositoryOwner" yaml:"repositoryOwner"`
 	// The key of a JSON field to retrieve in sourceSecret.
 	//
 	// This can only be used if the secret stores a JSON object.
@@ -213,18 +210,15 @@ type ActionSecretProps struct {
 	// The AWS secret in which the OAuth GitHub (personal) access token is stored.
 	// Experimental.
 	GithubTokenSecret awssecretsmanager.ISecret `field:"required" json:"githubTokenSecret" yaml:"githubTokenSecret"`
-	// The GitHub repository name.
+	// The GitHub repository information (owner and name).
 	// Experimental.
-	RepositoryName *string `field:"required" json:"repositoryName" yaml:"repositoryName"`
+	Repository IGitHubRepository `field:"required" json:"repository" yaml:"repository"`
 	// The GitHub secret name to be stored.
 	// Experimental.
 	RepositorySecretName *string `field:"required" json:"repositorySecretName" yaml:"repositorySecretName"`
 	// This AWS secret value will be stored in GitHub as a secret (under the name of repositorySecretName).
 	// Experimental.
 	SourceSecret awssecretsmanager.ISecret `field:"required" json:"sourceSecret" yaml:"sourceSecret"`
-	// The GitHub repository owner.
-	// Experimental.
-	RepositoryOwner *string `field:"optional" json:"repositoryOwner" yaml:"repositoryOwner"`
 	// The key of a JSON field to retrieve in sourceSecret.
 	//
 	// This can only be used if the secret stores a JSON object.
@@ -403,5 +397,60 @@ type GitHubResourceProps struct {
 	// The response body of the last GitHub api request will be written to this ssm parameter.
 	// Experimental.
 	WriteResponseToSSMParameter awsssm.IParameter `field:"optional" json:"writeResponseToSSMParameter" yaml:"writeResponseToSSMParameter"`
+}
+
+// Experimental.
+type IGitHubRepository interface {
+	// The GitHub repository name.
+	// Experimental.
+	Name() *string
+	// Experimental.
+	SetName(n *string)
+	// The GitHub repository owner.
+	// Experimental.
+	Owner() *string
+	// Experimental.
+	SetOwner(o *string)
+}
+
+// The jsii proxy for IGitHubRepository
+type jsiiProxy_IGitHubRepository struct {
+	_ byte // padding
+}
+
+func (j *jsiiProxy_IGitHubRepository) Name() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"name",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IGitHubRepository) SetName(val *string) {
+	_jsii_.Set(
+		j,
+		"name",
+		val,
+	)
+}
+
+func (j *jsiiProxy_IGitHubRepository) Owner() *string {
+	var returns *string
+	_jsii_.Get(
+		j,
+		"owner",
+		&returns,
+	)
+	return returns
+}
+
+func (j *jsiiProxy_IGitHubRepository) SetOwner(val *string) {
+	_jsii_.Set(
+		j,
+		"owner",
+		val,
+	)
 }
 

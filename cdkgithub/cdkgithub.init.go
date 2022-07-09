@@ -58,4 +58,15 @@ func init() {
 		"cdk-github.GitHubResourceProps",
 		reflect.TypeOf((*GitHubResourceProps)(nil)).Elem(),
 	)
+	_jsii_.RegisterInterface(
+		"cdk-github.IGitHubRepository",
+		reflect.TypeOf((*IGitHubRepository)(nil)).Elem(),
+		[]_jsii_.Member{
+			_jsii_.MemberProperty{JsiiProperty: "name", GoGetter: "Name"},
+			_jsii_.MemberProperty{JsiiProperty: "owner", GoGetter: "Owner"},
+		},
+		func() interface{} {
+			return &jsiiProxy_IGitHubRepository{}
+		},
+	)
 }
