@@ -71,7 +71,7 @@ All (typescript) examples can be found in the folder [examples](src/examples/).
 
 ## ActionSecret
 
-```typescript
+```go
 import { Secret } from 'aws-cdk-lib/aws-secretsmanager';
 import { ActionSecret } from 'cdk-github';
 
@@ -94,7 +94,7 @@ export class ActionSecretStack extends Stack {
 
 ## ActionEnvironmentSecret
 
-```typescript
+```go
 import { Secret } from 'aws-cdk-lib/aws-secretsmanager';
 import { ActionEnvironmentSecret } from 'cdk-github';
 
@@ -118,7 +118,7 @@ export class ActionEnvironmentSecretStack extends Stack {
 
 ## GitHubResource
 
-```typescript
+```go
 import { Secret } from 'aws-cdk-lib/aws-secretsmanager';
 import { StringParameter } from 'aws-cdk-lib/aws-ssm';
 import { GitHubResource } from 'cdk-github';
