@@ -1,3 +1,4 @@
+// AWS CDK Construct Library to interact with GitHub's API.
 package cdkgithub
 
 import (

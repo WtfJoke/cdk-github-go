@@ -1,6 +1,5 @@
 //go:build !no_runtime_type_checking
 
-// AWS CDK Construct Library to interact with GitHub's API.
 package cdkgithub
 
 import (
