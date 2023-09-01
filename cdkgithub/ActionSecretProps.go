@@ -21,6 +21,8 @@ type ActionSecretProps struct {
 	// The key of a JSON field to retrieve in sourceSecret.
 	//
 	// This can only be used if the secret stores a JSON object.
+	// Default: - returns all the content stored in the Secrets Manager secret.
+	//
 	// Experimental.
 	SourceSecretJsonField *string `field:"optional" json:"sourceSecretJsonField" yaml:"sourceSecretJsonField"`
 }

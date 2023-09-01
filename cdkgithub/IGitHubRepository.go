@@ -12,6 +12,8 @@ type IGitHubRepository interface {
 	// Experimental.
 	SetName(n *string)
 	// The GitHub repository owner.
+	// Default: - user account which owns the personal access token.
+	//
 	// Experimental.
 	Owner() *string
 	// Experimental.
